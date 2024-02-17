@@ -37,9 +37,9 @@ const Rooms = () => {
         gsap.set(split.chars, { opacity: 0, y: 20 });
 
         ScrollTrigger.batch(split.chars, {
-            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeave: batch => gsap.set(batch, { opacity: 0, y: -20, overwrite: true }),
-            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 20, overwrite: true }),
             start: 'top bottom',
             end: 'bottom top'
@@ -56,7 +56,7 @@ const Rooms = () => {
 
     return (
         <>
-            <div className="slider relative h-screen w-full bg-gradient-to-tl from-gray-900 to-gray-600 -z-10">
+            <div className="slider sticky top-0 h-screen w-full bg-gradient-to-tl from-gray-900 to-gray-600 -z-10">
                 <div className="h-screen  bg-center bg-cover bg-no-repeat object-contain w-full mix-blend-overlay absolute" style={{ backgroundImage: `url(${rooms})` }}>
                 </div>
 
@@ -86,7 +86,8 @@ const Rooms = () => {
             </div>
 
 
-            <div className=" ">
+          <div className="bg-white h-max">
+          <div className=" ">
                 <h2 className='text-4xl sm:text-4xl md:text-[128px] text-right p-[10px] md:p-[100px] text-[#5C6C68] font-anti opacity-50' data-aos="fade-up">Rooms</h2>
             </div>
 
@@ -202,6 +203,7 @@ const Rooms = () => {
                     </div>
                 </div>
             </div>
+          </div>
 
         </>
     )

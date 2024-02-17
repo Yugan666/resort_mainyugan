@@ -41,20 +41,35 @@ const Header = () => {
 
     return (
         <>
-            <div className="nav bg-cover bg-center bg-no-repeat fixed  top-0 z-50 left-0"
-                style={{
-                    background: 'linear-gradient(111deg, rgba(255, 255, 255, 0.40) -8.95%, rgba(255, 255, 255, 0.01) 114%)',
-                    backdropFilter: 'blur(50px)', display: visible ? 'block' : 'none'
-                }}
-            >
+            <div className="bg-color w-full delay-300 ">
 
                 {/* top nav */}
 
-                <div className=" px-[10px] md:px-[100px]  flex justify-between items-center border-b border-gray-300  py-[10px]">
-                    <div className="left-nav">
+                <div className=" px-[10px] md:px-[100px]  flex justify-between items-center border-b border-gray-300  py-[20px]">
+                    <div className=""></div>
+                    <div className="center-nav">
+                        <Link to='/'> <h3 className='font-logo text-[16px] md:text-2xl font-bold text-white'>Courtyard </h3></Link>
+                    </div>
+                    <div className=""></div>
+                </div>
+                {/* bottom nav */}
+                <div className="bot-nav border-b border-gray-300  py-3 text-white">
+                    <ul className='flex items-center border-b-transparent justify-center w-screen space-x-2 md:space-x-16 '>
+                        <Link to='/about'><li className='navLinks' >Our Story</li></Link>
+                        <Link to='/rooms'><li className='navLinks'>Rooms</li></Link>
+                        <Link to='/'><li className='navLinks'>Events</li></Link>
+                        <Link to='/menu'> <li className='navLinks'>Dinning</li></Link>
+                    </ul>
+                   
+                </div>
+            </div>
 
+
+            <div className="" style={{ display: visible ? 'block' : 'none' }}>
+                <div className="botom flex items-center justify-between fixed top-1 left-0 w-full z-50 px-8" >
+                    <div className="left-nav">
                         <div>
-                            <button class="relative group" onClick={() => setNav(!nav)}>
+                            <button class="relative group flex items-center btn-bg" onClick={() => setNav(!nav)}>
                                 <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all duration-200 ">
                                     <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
                                         <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg]"></div>
@@ -62,6 +77,7 @@ const Header = () => {
                                         <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg]"></div>
                                     </div>
                                 </div>
+                                <p className='text-white'>Menu</p>
                             </button>
                         </div>
 
@@ -98,29 +114,16 @@ const Header = () => {
                         }
 
                     </div>
-                    <div className="center-nav">
-                        <Link to='/'> <h3 className='font-logo text-[16px] md:text-2xl font-bold text-white'>Courtyard </h3></Link>
-                    </div>
+
                     <div className="right-nav">
 
-                        <button class="inline-block transition-all duration-200 relative overflow-hidden z-10 text-white md:px-7 px-3 md:py-2 py-1 cursor-pointer text-lg  bg-transparent border border-gray-300 shadow-lg hover:text-black  button2">
+                        <button class="inline-block transition-all duration-200 relative overflow-hidden z-10 text-white md:px-7 px-3 md:py-2 py-1 cursor-pointer text-lg  btn-bg   shadow-lg hover:text-black  button2">
                             Book Now
                         </button>
 
                         {/* <button className=''>Book Now</button> */}
                     </div>
                 </div>
-                {/* bottom nav */}
-                <div className="bot-nav border-b border-gray-300 text-white">
-                    <ul className='flex items-center border-b-transparent justify-center w-screen space-x-2 md:space-x-12 '>
-                        <Link to='/about'><li className={nav ? " text-[12px]  md-text-md text-xl p-[10px] border-b-2 cursor-pointer" : "text-xl p-[10px] hover:border-b-2 cursor-pointer"} >Our Story</li></Link>
-                        <Link to='/rooms'><li className={nav ? " text-[12px]  md-text-md text-xl p-[10px] border-b-2 cursor-pointer" : "text-xl p-[10px] hover:border-b-2 cursor-pointer"}>Rooms</li></Link>
-                        <Link to='/'><li className={nav ? " text-[12px]  md-text-md text-xl p-[10px] border-b-2 cursor-pointer" : "text-xl p-[10px] hover:border-b-2 cursor-pointer"}>Events</li></Link>
-                        <Link to='/menu'> <li className={nav ? " text-[12px]  md-text-md text-xl p-[10px] border-b-2 cursor-pointer" : "text-xl p-[10px] hover:border-b-2 cursor-pointer"}>Dinning</li></Link>
-                    </ul>
-                </div>
-
-
             </div>
 
 

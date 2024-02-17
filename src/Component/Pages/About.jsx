@@ -21,9 +21,9 @@ const About = () => {
         gsap.set(split.chars, { opacity: 0, y: 20 });
   
         ScrollTrigger.batch(split.chars, {
-            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeave: batch => gsap.set(batch, { opacity: 0, y: -20, overwrite: true }),
-            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 20, overwrite: true }),
             start: 'top bottom',
             end: 'bottom top'
@@ -42,9 +42,9 @@ const About = () => {
         gsap.set(split.chars, { opacity: 0, y: 20 });
   
         ScrollTrigger.batch(split.chars, {
-            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeave: batch => gsap.set(batch, { opacity: 0, y: -20, overwrite: true }),
-            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 20, overwrite: true }),
             start: 'top bottom',
             end: 'bottom top'
@@ -62,9 +62,9 @@ const About = () => {
         gsap.set(split.chars, { opacity: 0, y: 20 });
   
         ScrollTrigger.batch(split.chars, {
-            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeave: batch => gsap.set(batch, { opacity: 0, y: -20, overwrite: true }),
-            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.05, overwrite: true }),
+            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
             onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 20, overwrite: true }),
             start: 'top bottom',
             end: 'bottom top'
@@ -81,7 +81,7 @@ const About = () => {
     return (
         <>
 
-            <div className="slider relative h-screen w-full bg-gradient-to-tl from-gray-700 to-gray-700 -z-10" >
+            <div className="slider sticky top-0 h-screen w-full bg-gradient-to-tl from-gray-700 to-gray-700 -z-10" >
                 <div className="h-screen  bg-center bg-cover bg-no-repeat object-contain w-full absolute mix-blend-overlay" style={{ backgroundImage: `url(${bg})` }}>
                 </div>
 
@@ -113,7 +113,8 @@ const About = () => {
 
             {/* second section  */}
 
-            <div className=" h-[300px] md:h-screen items-center justify-center flex text-center px-[20px] md:px-[100px] text-[#5C6C68]">
+         <div className="bg-white h-max">
+         <div className=" h-[300px] md:h-screen items-center justify-center flex text-center px-[20px] md:px-[100px] text-[#5C6C68]">
                 <h2 className='text-2xl md:text-[64px] leading-snug  font-anti anim' ref={ref}>The idea of "Courtyard Castle" was born out of an enthusiasm for great food and culture.</h2>
             </div>
 
@@ -164,8 +165,8 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2  relative top-[85vh]">
                    <div className="relative">
-                   <img src={aboutThree} alt="About_bg" className='object-contain ' data-aos='zoom-in' data-aos-delay='600' />
-                    <div className="content-above absolute flex items-center justify-center h-full w-full  top-0  space-y-2  text-white flex-col px-[60px]">
+                   <img src={aboutThree} alt="About_bg" className='object-contain '  />
+                    <div className="content-above absolute flex items-center justify-center h-full w-full  top-0  space-y-2  text-white flex-col px-[60px]" data-aos='zoom-in' data-aos-delay='600'>
                         <h2 className='text-4xl'>Our Rooms</h2>
                         <p className=' text-2xl'>The people, food and the prime locations make Rodich the perfect place good fri</p>
                     </div>
@@ -180,6 +181,7 @@ const About = () => {
 
 
            </div>
+         </div>
         </>
     )
 }

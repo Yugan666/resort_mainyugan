@@ -7,7 +7,7 @@ const Hero = lazy(() => import('./Component/Hero'))
 const Menu = lazy(() => import('./Component/Pages/Menu'))
 const About = lazy(() => import('./Component/Pages/About'))
 const Gallery = lazy(() => import('./Component/Pages/Gallery'))
-const Rooms = lazy(() => import('./Component/Pages/Gallery'))
+const Rooms = lazy(() => import('./Component/Pages/Rooms'))
 
 
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Suspense fallback={<PreLoader/>}>
-      <Header className='' />
+      <Header/>
         <Routes>
           <Route path='/' element={<Hero />} />
           <Route path='menu' element={<Menu />} />
