@@ -194,7 +194,7 @@ const Rooms = () => {
                 </div>
                 <div className="relative bg-s overflow-hidden">
                     <img src={igThree} alt="img" className='object-contain' />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white text-4xl font-urban space-y-6">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 hov-hide -translate-y-1/2 text-center text-white text-4xl font-urban space-y-6">
                         <h2 className='md:text-[64px] font-light'>Sauna</h2>
                         <h3 className='md:text-[64px] font-normal'>world</h3>
                     </div>

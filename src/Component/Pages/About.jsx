@@ -166,9 +166,9 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2  relative top-[85vh]">
                    <div className="relative">
                    <img src={aboutThree} alt="About_bg" className='object-contain '  />
-                    <div className="content-above absolute flex items-center justify-center h-full w-full  top-0  space-y-2  text-white flex-col px-[60px]" data-aos='zoom-in' data-aos-delay='600'>
-                        <h2 className='text-4xl'>Our Rooms</h2>
-                        <p className=' text-2xl'>The people, food and the prime locations make Rodich the perfect place good fri</p>
+                    <div className="content-above absolute flex items-start justify-center text-xl leading-relaxed h-full w-full  top-0  space-y-2  text-white flex-col px-[60px]" data-aos='zoom-in' data-aos-delay='600'>
+                        <h2 className='text-5xl font-anti'>Our Rooms</h2>
+                        <p className=' '>The people, food and the prime locations <br /> make Rodich the perfect place good fri</p>
                     </div>
                    </div>
                     <div className=" px-[30px] font-urban text-xl leading-relaxed  flex flex-col items-center justify-center ">

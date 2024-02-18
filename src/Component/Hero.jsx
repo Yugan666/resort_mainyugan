@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Animation.css'
 import downarrow from '../assets/images/down-arrow.svg'
 import circleText from '../assets/images/circle-text.png'
-import r1 from '../assets/images/r-1.png'
-import r2 from '../assets/images/r-2.png'
-import r3 from '../assets/images/r-3.png'
+// import r1 from '../assets/images/r-1.png'
+// import r2 from '../assets/images/r-2.png'
+// import r3 from '../assets/images/r-3.png'
 // import ExpolareSlider from './ExpolareSlider'
 import story from '../assets/images/story.png'
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -71,26 +71,7 @@ const Hero = () => {
             split.revert();
         };
     }, []);
-    const ref2 = useRef(null);
 
-    useEffect(() => {
-        const split = new SplitText(ref2.current, { type: 'chars, words' });
-
-        gsap.set(split.chars, { opacity: 0, y: 20 });
-
-        ScrollTrigger.batch(split.chars, {
-            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
-            onLeave: batch => gsap.set(batch, { opacity: 0, y: -20, overwrite: true }),
-            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.02, overwrite: true }),
-            onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 20, overwrite: true }),
-            start: 'top bottom',
-            end: 'bottom top'
-        });
-
-        return () => {
-            split.revert();
-        };
-    }, []);
     const ref3 = useRef(null);
 
     useEffect(() => {
@@ -118,6 +99,16 @@ const Hero = () => {
     }, []);
 
 
+    // const settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 1000,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 4000,
+    // };
+
     const settings = {
         dots: true,
         infinite: true,
@@ -126,7 +117,40 @@ const Hero = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
+        centerMode: true, // To ensure the centered slide is recognized for scaling
+        focusOnSelect: true,
+        // Add any more settings you require
     };
+
+    const [isHovering, setIsHovering] = useState(false);
+    const [isHovering2, setIsHovering2] = useState(false);
+    const [isHovering3, setIsHovering3] = useState(false);
+
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position2, setPosition2] = useState({ x: 0, y: 0 });
+    const [position3, setPosition3] = useState({ x: 0, y: 0 });
+
+    // Handle mouse moving over the component
+    const handleMouseMove = (e) => {
+        setPosition({
+            x: e.clientX,
+            y: e.clientY,
+        });
+    };
+    const handleMouseMove2 = (e) => {
+        setPosition2({
+            x: e.clientX,
+            y: e.clientY,
+        });
+    };
+    const handleMouseMove3 = (e) => {
+        setPosition3({
+            x: e.clientX,
+            y: e.clientY,
+        });
+    };
+
+    
 
     return (
         <>
@@ -197,10 +221,66 @@ const Hero = () => {
                 {/* hover rooms */}
 
                 <div className="">
-                    <div className=" h-auto  md:h-screen bg-[#DEE2E1] grid grid-cols-1 place-items-center md:grid-cols-3 px-[10px] md:px-[100px] text-[#5C6C68] font-[anti] ">
+                    <div className=" h-auto  md:h-[600px] relative bg-[#DEE2E1] w-full overflow-hidden  text-[#5C6C68] font-[anti] flex items-center justify-around text-[78px]  ">
 
 
-                        <div className="relative hover:text-white hidden md:block">
+                        
+                            <div className="relative h-[600px] " onMouseMove={handleMouseMove}>
+
+                                <h2 className='hover:tracking-[5px] z-20 hover:text-white inline-block relative top-[250px] ' onMouseOver={() => setIsHovering(true)}
+                                    onMouseOut={() => setIsHovering(false)}>Rooms</h2>
+                                {
+                                    isHovering && <img src={gallery1} alt="" className='mov-img absolute top-0' style={{
+                                        display: 'block',
+                                        position: 'absolute',
+                                        left: position.x,
+                                        top: position.y,
+                                        pointerEvents: 'none',
+                                        minWidth: '600px',
+                                        height: '400px'
+                                    }} />
+                                }
+                            </div>
+                            <div className="relative h-[600px] " onMouseMove={handleMouseMove2}>
+
+                                <h2 className='hover:tracking-[5px] z-20 hover:text-white inline-block relative top-[250px] ' onMouseOver={() => setIsHovering2(true)}
+                                    onMouseOut={() => setIsHovering2(false)}>Suites</h2>
+                                {
+                                    isHovering2 && <img src={gallery2} alt="" className='mov-img relative left-0' style={{
+                                        display: 'block',
+                                        position: 'absolute',
+                                        right: position2.x,
+                                        top: position2.y,
+                                        pointerEvents: 'none',
+                                        minWidth: '600px',
+                                        height: '400px'
+                                    }} />
+                                }
+                            </div>
+                            <div className="relative h-[600px] " onMouseMove={handleMouseMove3}>
+
+                                <h2 className='hover:tracking-[5px] z-20 hover:text-white inline-block relative top-[250px] ' onMouseOver={() => setIsHovering3(true)}
+                                    onMouseOut={() => setIsHovering3(false)}>Villas</h2>
+                                {
+                                    isHovering3 && <img src={gallery3} alt="" className='mov-img relative left-0' style={{
+                                        display: 'block',
+                                        position: 'absolute',
+                                        right: position3.x,
+                                        top: position3.y,
+                                        pointerEvents: 'none',
+                                        minWidth: '600px',
+                                        height: '400px'
+                                    }} />
+                                }
+                            </div>
+                     
+                        
+
+
+                        
+
+
+                        {/* <div className="relative hover:text-white hidden md:block">
                             <h2 className='text-2xl md:text-5xl hover:text-white text-center cursor-pointer absolute top-1/2 left-1/2  translate-y-1/2 z-10'>Rooms</h2>
                             <div className="relative perspective-1000">
                                 <div className="transform-style-preserve-3d delay-300">
@@ -223,7 +303,7 @@ const Hero = () => {
                                     <img src={r3} alt="suites" className='w-full object-cover opacity-0 hover:opacity-100 md:hover:scale-x-110 hover:scale-y-150 transform transition-transform duration-300 -z-10' />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="md:hidden text-[60px]">
                             <Link to='/rooms'>Room</Link>
@@ -263,7 +343,7 @@ const Hero = () => {
                 <div className="flex items-center justify-between mb-[100px] w-fit">
                     <img src={story} alt="story-content" className='w-[300px] hidden md:block' data-aos='fade-right' data-aos-delay='600' />
                     <div className="px-[10px] md:px-[50px] text-urban text-xl md:text-3xl text-[#494541]">
-                        <p ref={ref2} className='anim'>
+                        <p data-aos='fade-down' data-aos-delay='600' className='anim'>
                             At Aeorian , we believe that the ultimate luxury lies in the time and connections we make. Hence, the facilities and experiences are carefully crafted to rejuvenate the senses and foster connections with nature, family, and friends. Relax, rejuvenate, and reconnect with the world around you .
                         </p>
                     </div>
@@ -289,7 +369,7 @@ const Hero = () => {
                             src="https://cdn.illusiview.com/Arch4Foundation/index.htm"
                             frameborder="0"
                             title='illusview'
-                            className=' w-full md:w-[100vw] h-[50vh] md:h-screen object-cover your-image-class' style={{ transform: 'scale(0.9)' }}
+                            className=' w-full md:w-[100vw] h-[50vh] md:h-screen object-cover your-image-class' style={{ transform: 'scale(0.7)' }}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>

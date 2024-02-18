@@ -252,14 +252,14 @@ const Menu = () => {
                 </div>
 
                 <div className="text-[#5C6C68] grid grid-cols-1 md:grid-cols-2 gap-3 md:px-[100px] px-[10px] md:h-auto">
-                    <div className="">
+                    <div className="relative">
                         {
                             activeImage? (
                                 <img
                                 
                                 src={activeImage.img}
                                 alt="food"
-                                className={`object-contain md:h-[100vh] h-[60vh] md:mt-0 mt-2 w-full block transition-opacity duration-500`}
+                                className={`object-contain md:h-[100vh] h-[60vh] md:mt-0 mt-2 w-full absolute transition-opacity duration-500`}
                                 data-aos='zoom-in'
                                 data-aos-delay='600'
                             />
@@ -268,7 +268,7 @@ const Menu = () => {
                                 
                                 src={disOne}
                                 alt="food"
-                                className={`object-contain md:h-[100vh] h-[50vh] block transition-opacity duration-500`}
+                                className={`object-contain md:h-[100vh] h-[50vh] absolute transition-opacity duration-500`}
                                 data-aos='zoom-in'
                                 data-aos-delay='600'
                             />

@@ -54,8 +54,8 @@
     background-color: transparent;
 }
 
-.anims {
-    animation: anims-testi 5s infinite;
+.hov-hide:hover {
+    visibility: hidden;
 }
 
 @keyframes anims-testi {
@@ -237,6 +237,10 @@
   .zom{
     animation: zom 10s infinite;
   }
+  .zom:hover{
+    animation: none;
+    cursor: pointer;
+  }
 
   @keyframes zom {
     0%{
@@ -385,3 +389,30 @@
   transition: 1s ease-in-out;
 }
 
+.slick-slide {
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slick-center {
+  animation: animslide 5s ease-in-out;
+}
+@keyframes animslide {
+  0%{
+      transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
+
+.mov-img{
+  /* display: 'block',
+position: 'absolute',
+left: position.x,
+top: position.y,
+pointerEvents: 'none',
+width: '300px',
+height:'300px'  */
+transform: translateX(-50%);
+}

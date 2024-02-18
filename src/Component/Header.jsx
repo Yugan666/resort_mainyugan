@@ -10,6 +10,7 @@ const Header = () => {
 
     const [visible, setVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [btn,setBtn] =useState(false)
 
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
@@ -19,8 +20,10 @@ const Header = () => {
 
         if (isScrollingUp || currentScrollPos < 10) {
             setVisible(true);
+            setBtn(true)
         } else {
             setVisible(false);
+            setBtn(false)
         }
     };
 
@@ -67,15 +70,15 @@ const Header = () => {
 
 
             <div className="w-full mx-auto" style={{ display: visible ? 'block' : 'none' }}>
-                <div className="botom flex items-center justify-between fixed top-1  md:w-[90vw] z-50 w-[100vw] md:left-[50px] left-0  pt-2 md:pt-0 md:pr-0" >
+                <div className="botom flex items-center justify-between fixed top-1  md:w-[100vw] z-50 w-[100vw] pt-2 md:pt-0 md:pr-0" >
                     <div className="left-nav">
                         <div>
-                            <button class="relative group flex items-center btn-bg" onClick={() => setNav(!nav)}>
-                                <div class="relative flex overflow-hidden items-center justify-center rounded-full w-auto md:w-[50px] h-auto p-2 md:p-0 md:h-[50px] transform transition-all duration-200 ">
-                                    <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                                        <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg]"></div>
-                                        <div class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-translate-x-10"></div>
-                                        <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg]"></div>
+                            <button className={btn?"btn-bg relative group flex items-center md:left-5":"relative group flex items-center md:left-5"  } onClick={() => setNav(!nav)}>
+                                <div className="relative flex overflow-hidden items-center justify-center rounded-full w-auto md:w-[50px] h-auto p-2 md:p-0 md:h-[50px] transform transition-all duration-200 ">
+                                    <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                                        <div className="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg]"></div>
+                                        <div className="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-translate-x-10"></div>
+                                        <div className="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg]"></div>
                                     </div>
                                 </div>
                                 <p className='text-white'>Menu</p>
@@ -118,7 +121,7 @@ const Header = () => {
 
                     <div className="right-nav">
 
-                        <button class="inline-block transition-all duration-200 relative  overflow-hidden z-10 text-white md:px-7  md:py-3 py-1 cursor-pointer text-lg  btn-bg   shadow-lg hover:text-black  button2">
+                        <button class={btn?"inline-block transition-all duration-200 relative md:right-10 overflow-hidden z-10 text-white md:px-7  md:py-3 py-1 cursor-pointer text-lg  shadow-lg hover:text-black btn-bg  button2":"inline-block transition-all duration-200 relative md:right-10 overflow-hidden z-10 text-white md:px-7  md:py-3 py-1 cursor-pointer text-lg border shadow-lg hover:text-black  button2"}>
                             Book Now
                         </button>
 
