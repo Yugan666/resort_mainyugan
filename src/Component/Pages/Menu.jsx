@@ -73,6 +73,10 @@ const Menu = () => {
 
     const [activeImage, setActiveImage] = useState(null)
 
+    const handleItemClick = (item) => {
+        setActiveImage(item);
+      };
+
     const ref = useRef(null);
 
     useEffect(() => {
@@ -249,7 +253,7 @@ const Menu = () => {
 
                 <div className="text-[#5C6C68] grid grid-cols-1 md:grid-cols-2 gap-3 md:px-[100px] px-[10px] md:h-auto">
                     <div className="relative">
-                        {images.map((item) => (
+                        {/* {images.map((item) => (
                             <img
                                 key={item.id}
                                 src={item.img}
@@ -258,7 +262,29 @@ const Menu = () => {
                                 data-aos='zoom-in'
                                 data-aos-delay='600'
                             />
-                        ))}
+                        ))} */}
+
+                        {
+                            activeImage? (
+                                <img
+                                
+                                src={activeImage.img}
+                                alt="food"
+                                className={`object-contain h-[100vh] absolute transition-opacity duration-500`}
+                                data-aos='zoom-in'
+                                data-aos-delay='600'
+                            />
+                            ):(
+                                <img
+                                
+                                src={disOne}
+                                alt="food"
+                                className={`object-contain h-[100vh] absolute transition-opacity duration-500`}
+                                data-aos='zoom-in'
+                                data-aos-delay='600'
+                            />
+                            )
+                        }
                     </div>
                     <div>
                         <h2 className='text-xl md:text-[54px] my-3 md:my-2 leading-snug'>Try Our Authentic Menu</h2>
@@ -267,8 +293,7 @@ const Menu = () => {
                                 <li
                                     key={item.id}
                                     className='list cursor-pointer'
-                                    onMouseEnter={() => setActiveImage(item.id)}
-                                    onMouseLeave={() => setActiveImage(null)} // Uncomment if you want images to fade out when not hovering over any list items
+                                    onMouseOver={()=>handleItemClick(item)}  
                                 >
                                     {item.list} <span className='inline-block transform transition-transform hover:translate-x-2'>→</span>
                                 </li>

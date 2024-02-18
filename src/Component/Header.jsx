@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import menu from '../assets/images/menu-icon.svg'
 import cross from '../assets/images/int.svg'
 import { Link } from 'react-router-dom'
 import './Animation.css'
