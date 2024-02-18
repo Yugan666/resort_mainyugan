@@ -252,25 +252,14 @@ const Menu = () => {
                 </div>
 
                 <div className="text-[#5C6C68] grid grid-cols-1 md:grid-cols-2 gap-3 md:px-[100px] px-[10px] md:h-auto">
-                    <div className="relative">
-                        {/* {images.map((item) => (
-                            <img
-                                key={item.id}
-                                src={item.img}
-                                alt="food"
-                                className={`object-contain h-[100vh] absolute transition-opacity duration-500 ${activeImage === item.id ? 'opacity-1' : 'opacity-0'}`}
-                                data-aos='zoom-in'
-                                data-aos-delay='600'
-                            />
-                        ))} */}
-
+                    <div className="">
                         {
                             activeImage? (
                                 <img
                                 
                                 src={activeImage.img}
                                 alt="food"
-                                className={`object-contain h-[100vh] absolute transition-opacity duration-500`}
+                                className={`object-contain md:h-[100vh] h-[60vh] md:mt-0 mt-2 w-full block transition-opacity duration-500`}
                                 data-aos='zoom-in'
                                 data-aos-delay='600'
                             />
@@ -279,7 +268,7 @@ const Menu = () => {
                                 
                                 src={disOne}
                                 alt="food"
-                                className={`object-contain h-[100vh] absolute transition-opacity duration-500`}
+                                className={`object-contain md:h-[100vh] h-[50vh] block transition-opacity duration-500`}
                                 data-aos='zoom-in'
                                 data-aos-delay='600'
                             />
@@ -287,8 +276,8 @@ const Menu = () => {
                         }
                     </div>
                     <div>
-                        <h2 className='text-xl md:text-[54px] my-3 md:my-2 leading-snug'>Try Our Authentic Menu</h2>
-                        <ul className='space-y-3 md:space-y-2 list-none text-md md:text-[26px]'>
+                        <h2 className='text-xl  md:text-[54px] my-1 md:my-2 leading-snug'>Try Our Authentic Menu</h2>
+                        <ul className='space-y-1 relative md:space-y-2 list-none text-md md:text-[26px]'>
                             {images.map((item) => (
                                 <li
                                     key={item.id}

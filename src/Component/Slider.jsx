@@ -50,7 +50,7 @@ const Slider = () => {
 
         <div className="absolute top-0 left-0 h-[300px] w-full bg-[#C7D4D1]"></div>
         <div className=" mx-auto flex items-center justify-center absolute z-10 h-screen w-full">
-                <div className="bg-white absolute z-10 p-[20px] w-[250px] md:w-[300px] text-wrap ">
+                <div className="bg-white absolute top-[80px] md:top-0 z-10 p-[20px] w-[250px] md:w-[300px] text-wrap ">
                   <div className="border border-gray-300 p-[30px] text-center">
                     <p className='font-urban text-md md:text-xl anim' ref={ref} > Courtyard Castle , we believe that the ultimate luxury lies in the time and connections we make. Hence, the facilities and experiences are carefully </p>
                   </div>

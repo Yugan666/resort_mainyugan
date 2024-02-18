@@ -380,8 +380,8 @@ const Hero = () => {
 
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3  px-[10px] md:px-[100px] gap-4  pb-5 ">
-                    <img src={imgOne} alt="gallery-imgs" className='object-contain sticky top-14 md:top-0 -z-20 md:z-0 ' data-aos='fade-up' data-aos-delay='600' />
-                    <img src={imgTwo} alt="gallery-imgs" className='object-contain sticky top-14 md:top-0 -z-10 md:z-0' data-aos='fade-down' data-aos-delay='600' />
+                    <img src={imgOne} alt="gallery-imgs" className='object-contain sticky top-14 md:top-0 sm:-z-20 md:z-0 ' data-aos='fade-up' data-aos-delay='600' />
+                    <img src={imgTwo} alt="gallery-imgs" className='object-contain sticky top-14 md:top-0 sm:-z-10 md:z-0' data-aos='fade-down' data-aos-delay='600' />
                     <img src={imgThree} alt="gallery-imgs" className='object-contain' data-aos='fade-up' data-aos-delay='600' />
                 </div>
             </div>
