@@ -20,7 +20,7 @@ const MenuList = () => {
                 <div className="">
                     {imgs ?
                     <div className="listoneimg">
-                        <img src={disOne} alt="" className='object-contain h-[100vh]' data-aos='zoom-in' data-aos-delay='600' />
+                        <img src={disOne} alt="foodList" className='object-contain h-[100vh]' data-aos='zoom-in' data-aos-delay='600' />
                     </div>:null
                     }
                 </div>

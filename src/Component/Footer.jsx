@@ -16,7 +16,7 @@ const Footer = () => {
 
                     <div className="space-y-9 md:space-y-20">
                         <div className="text-center flex items-center justify-center flex-col space-y-6">
-                            <img src={logoTop} alt="" className='object-contain' />
+                            <img src={logoTop} alt="Logo" className='object-contain' />
                             <h2 className='font-logo text-xl '>Courtyard Castle</h2>
                             <h5 className='text-xl'>Hotels & Resort</h5>
                         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
                         <p className='text-md'>Comfortable rooms, suites and <br />
                             villas are always ready for your visit.</p>
 
-                            <button class="inline-block transition-all duration-200 relative overflow-hidden z-10 text-white px-7 py-2 cursor-pointer text-lg  bg-transparent border border-gray-300 shadow-lg hover:text-white hover:border-teal-500 button2">
+                            <button class="inline-block transition-all duration-200 relative overflow-hidden z-10 text-white px-7 py-2 cursor-pointer text-lg  bg-transparent border border-gray-300 shadow-lg hover:text-black hover:border-teal-500 button2">
                            Book Now
                         </button>
                     </div>

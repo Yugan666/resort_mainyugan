@@ -129,7 +129,7 @@ const Rooms = () => {
                                 <p>Traditional Spa</p>
                             </div>
                             <div className="flex gap-4 text-xl items-center">
-                                <p><img src={amenIconFour} alt="" /></p>
+                                <p><img src={amenIconFour} alt="Rooms" /></p>
                                 <p>2 Baths </p>
                             </div>
 

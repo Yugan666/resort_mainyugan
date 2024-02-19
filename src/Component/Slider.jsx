@@ -67,7 +67,7 @@ const Slider = () => {
             <div className=" h-[300px] md:h-screen relative ">
 
               <div className="absolute flex items-center justify-center h-[500px] md:h-screen w-full ">
-                <img src={slider} alt="" className='bg-center bg-cover h-[500px] md:h-screen slow-spin mx-[100px]' />
+                <img src={slider} alt="Slider-img" className='bg-center bg-cover h-[500px] md:h-screen slow-spin mx-[100px]' />
 
               </div>
 
@@ -77,7 +77,7 @@ const Slider = () => {
             
 
               <div className="absolute flex items-center justify-center h-[500px] md:h-screen w-full">
-                <img src={slider2} alt="" className='bg-center bg-cover  object-cover w-full h-[500px] md:h-screen mx-[100px] slow-spin' />
+                <img src={slider2} alt="Slider_img" className='bg-center bg-cover  object-cover w-full h-[500px] md:h-screen mx-[100px] slow-spin' />
 
               </div>
             </div>
@@ -85,7 +85,7 @@ const Slider = () => {
             <div className="h-screen relative ">
 
               <div className="absolute flex items-center justify-center h-[500px] md:h-screen">
-                <img src={slider3} alt="" className='bg-center bg-cover  object-cover sm:w-full sm:h-full h-[500px] md:h-screen mx-[100px] slow-spin' />
+                <img src={slider3} alt="Slider_img" className='bg-center bg-cover  object-cover sm:w-full sm:h-full h-[500px] md:h-screen mx-[100px] slow-spin' />
 
               </div>
 

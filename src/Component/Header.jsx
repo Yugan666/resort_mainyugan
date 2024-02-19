@@ -85,12 +85,10 @@ const Header = () => {
                             </button>
                         </div>
 
-                        {/* <img src={menu} alt="" onClick={() => setNav(!nav)} className='cursor-pointer  px-3 py-2 rounded-lg' /> */}
-
                         {nav ? <div className=" nav-bg-color z-20  w-screen absolute top-0 left-0 h-screen  transition duration-[2000ms] ease-in-out">
                             <div className="grid grid-cols-1 md:grid-cols-3  items-start justify-center h-screen">
                                 <div className="right mx-auto">
-                                    <img src={cross} alt="" className='opacity-60 w-[60px] h-[60px] mt-3 md:ml-20 cursor-pointer' onClick={() => setNav(false)} />
+                                    <img src={cross} alt="crossBtn" className='opacity-60 w-[60px] h-[60px] mt-3 md:ml-20 cursor-pointer' onClick={() => setNav(false)} />
                                     <ul className='space-y-16 md:space-x-0 inline-block w-[80vw] px-[100px] mt-16'>
 
                                         <li><Link to='/rooms' onClick={() => setNav(false)} className='text-5xl text-white font-anti cursor-pointer hover:text-[#ccc] '><span className='hover:tracking-[5px] inline-block'>Rooms</span></Link></li>

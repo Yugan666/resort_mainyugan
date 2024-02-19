@@ -230,7 +230,7 @@ const Hero = () => {
                                 <h2 className='hover:tracking-[5px] z-20 hover:text-white inline-block relative top-[250px] ' onMouseOver={() => setIsHovering(true)}
                                     onMouseOut={() => setIsHovering(false)}>Rooms</h2>
                                 {
-                                    isHovering && <img src={gallery1} alt="" className='mov-img absolute top-0' style={{
+                                    isHovering && <img src={gallery1} alt="Gallery_img" className='mov-img absolute top-0' style={{
                                         display: 'block',
                                         position: 'absolute',
                                         left: position.x,
@@ -246,7 +246,7 @@ const Hero = () => {
                                 <h2 className='hover:tracking-[5px] z-20 hover:text-white inline-block relative top-[250px] ' onMouseOver={() => setIsHovering2(true)}
                                     onMouseOut={() => setIsHovering2(false)}>Suites</h2>
                                 {
-                                    isHovering2 && <img src={gallery2} alt="" className='mov-img relative left-0' style={{
+                                    isHovering2 && <img src={gallery2} alt="galleryImg" className='mov-img relative left-0' style={{
                                         display: 'block',
                                         position: 'absolute',
                                         right: position2.x,
@@ -262,7 +262,7 @@ const Hero = () => {
                                 <h2 className='hover:tracking-[5px] z-20 hover:text-white inline-block relative top-[250px] ' onMouseOver={() => setIsHovering3(true)}
                                     onMouseOut={() => setIsHovering3(false)}>Villas</h2>
                                 {
-                                    isHovering3 && <img src={gallery3} alt="" className='mov-img relative left-0' style={{
+                                    isHovering3 && <img src={gallery3} alt="gallery" className='mov-img relative left-0' style={{
                                         display: 'block',
                                         position: 'absolute',
                                         right: position3.x,
@@ -360,7 +360,6 @@ const Hero = () => {
                     <button class="inline-block items-center transition-all duration-200 relative overflow-hidden z-10 text-[#5C6C68] md:px-7 exp-button px-3 md:py-2 py-1 cursor-pointer text-lg  bg-transparent border border-[#5C6C68] hover:text-white shadow-lg  button3">
                         <div className="flex items-center "><span className='pr-3 iconsd'><FaArrowRightLong /></span><span className=''>Explore Virual tour</span></div>
                     </button>
-                    {/* <button className='py-2 px-4  border border-gray-500'><span><img src={rightarrow} alt="" className='inline pr-2' /></span><span className='inline'>Explore Virual tour</span></button> */}
                 </div>
 
                 <div className="relative h-[50vh] md:h-[100vh] w-full">
@@ -404,30 +403,37 @@ const Hero = () => {
                 <div className=" h-auto md:h-screen px-[10px] md:px-[100px]  gap-3 grid md:grid-cols-3 grid-cols-2">
                     <div className="gals">
                         <img src={gallery1} alt="gallery" className='object-contain ' data-aos='zoom-in' data-aos-delay='600' />
+                        <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Salem Mutton Carrot vada</p>
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="gals">
                             <img src={gallery2} alt="gallery" className='object-contain' data-aos='zoom-in' data-aos-delay='600' />
+                            <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Karaikudi Chettinad Chicken </p>
                         </div>
                         <div className="gals">
                             <img src={gallery3} alt="gallery" className='object-contain' data-aos='zoom-in' data-aos-delay='600' />
+                            <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Madurai Malli poo idly</p>
                         </div>
                     </div>
                     <div className=" gap-2 hidden md:block">
                         <div className="my-2 gals">
                             <img src={gallery4} alt="gallery" className='object-contain' data-aos='zoom-in' data-aos-delay='600' />
+                            <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Kerala Coconut Puttu </p>
                         </div>
                         <div className="gals">
                             <img src={gallery5} alt="gallery" className='object-contain' data-aos='zoom-in' data-aos-delay='600' />
+                            <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Kerala Fish Curry</p>
                         </div>
                     </div>
                 </div>
                 <div className="p-[10px] grid grid-cols-2 gap-2 md:hidden " data-aos='zoom-in' data-aos-delay='600'>
                     <div className="gals">
                         <img src={gallery4} alt="gallery" className='object-contain' data-aos='zoom-in' data-aos-delay='600' />
+                        <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Kerala Coconut Puttu </p>
                     </div>
                     <div className="gals">
                         <img src={gallery5} alt="gallery" className='object-contain' data-aos='zoom-in' data-aos-delay='600' />
+                        <p className='text-white text-md md:text-2xl absolute bottom-0 p-3'>Kerala Fish Curry</p>
                     </div>
                 </div>
 
@@ -460,9 +466,15 @@ const Hero = () => {
 
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3  px-[10px] md:px-[100px] gap-4  pb-5 ">
-                    <img src={imgOne} alt="gallery-imgs" className='object-contain sticky top-14 md:top-0 sm:-z-20 md:z-0 ' data-aos='fade-up' data-aos-delay='600' />
-                    <img src={imgTwo} alt="gallery-imgs" className='object-contain sticky top-14 md:top-0 sm:-z-10 md:z-0' data-aos='fade-down' data-aos-delay='600' />
-                    <img src={imgThree} alt="gallery-imgs" className='object-contain' data-aos='fade-up' data-aos-delay='600' />
+                    <div className="overflow-hidden sticky top-14 md:top-0 sm:-z-20 md:z-0 ">
+                    <img src={imgOne} alt="gallery-imgs" className='object-contain  zom' data-aos='fade-up' data-aos-delay='600' />
+                    </div>
+                    <div className="overflow-hidden sticky top-14 md:top-0 sm:-z-10 md:z-0">
+                    <img src={imgTwo} alt="gallery-imgs" className='object-contain zom' data-aos='fade-down' data-aos-delay='600' />
+                    </div>
+                    <div className="overflow-hidden">
+                    <img src={imgThree} alt="gallery-imgs" className='object-contain zom' data-aos='fade-up' data-aos-delay='600' />
+                    </div>
                 </div>
             </div>
 

@@ -312,7 +312,7 @@ const Menu = () => {
                         </div>
 
                         <div className="">
-                            <img src={foodThree} alt="" className='object-contain ' data-aos='zoom-in' data-aos-delay='600' />
+                            <img src={foodThree} alt="Footer_img" className='object-contain ' data-aos='zoom-in' data-aos-delay='600' />
                         </div>
 
                     </div>
